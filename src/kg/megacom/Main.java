@@ -23,7 +23,7 @@ public class Main {
     public static void cylinderVol(int radius, int height) throws NegativeValueException {
         if (radius < 0) {
             throw new NegativeValueException("Радиус не должен быть отрицательным");
-        } else System.out.println(radius * height);
+        } else System.out.println("Radius: " + radius + "; height: " + height + "; volume = " + radius * height);
 
     }
 }
