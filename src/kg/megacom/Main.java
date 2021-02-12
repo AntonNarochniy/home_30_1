@@ -1,5 +1,6 @@
 package kg.megacom;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -24,7 +25,10 @@ public class Main {
     public static void cylinderVol(int radius, int height) throws NegativeValueException {
         if (radius < 0) {
             throw new NegativeValueException("Радиус не должен быть отрицательным");
-        } else System.out.println("Radius: " + radius + "; height: " + height + "; volume = " + radius * height);
+        } else {
+            DecimalFormat f = new DecimalFormat("##.00");
+            System.out.println("Радиус: " + radius + " м; Высота " + height + " м; объём = " + f.format(Math.PI * Math.pow(radius, 2) * height) + " м\u00b3");
+        }
 
     }
 }
