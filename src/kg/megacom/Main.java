@@ -16,6 +16,7 @@ public class Main {
                 cylinderVol(radiusList.get(i), height);
             } catch (NegativeValueException e) {
                 e.printStackTrace();
+                System.out.println("Радиус отрицательный: " + radiusList.get(i) );
             }
         }
     }
